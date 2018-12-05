@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import styles from './Pictures.module.css'
 import PictureContainer from './PictureContainer/PictureContainer'
-import Buttons from './Buttons/Buttons'
+import ControlButtons from './ControlButtons/ControlButtons'
 
 class Pictures extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class Pictures extends Component {
       <div className={style}>
         <PictureContainer counter={this.state.counter} src={this.state.image.url} alt={this.state.image.title} />
         <div className="">{this.state.counter}</div>
-        <Buttons click={this.changeCounter} />
+        <ControlButtons click={this.changeCounter} />
       </div>
     )
   }
