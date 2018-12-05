@@ -2,7 +2,7 @@ import React from 'react'
 import ImageLoader from 'react-imageloader'
 
 import styles from './PictureContainer.module.css'
-import Spinner from '../../Spinner/Spinner'
+import Spinner from '../../UI/Spinner/Spinner'
 
 const pictureContainer = props => {
   let images = []
