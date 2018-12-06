@@ -14,5 +14,6 @@ script:
 
 deploy:
   provider: heroku
-  token: $HEROKU_AUTH_TOKEN
+  api_key: $HEROKU_AUTH_TOKEN
   app: react-picture-copy
+  skip_cleanup: true
