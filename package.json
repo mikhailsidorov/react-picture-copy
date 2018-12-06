@@ -31,5 +31,10 @@
       "!/src/serviceWorker.js",
       "!/src/*.test.js"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "react-test-renderer": "^16.6.3"
   }
 }
