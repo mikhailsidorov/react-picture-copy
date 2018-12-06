@@ -7,17 +7,14 @@ import Spinner from '../../UI/Spinner/Spinner'
 const pictureContainer = props => {
   let images = []
   for (let c = 1; c <= props.counter; c++) {
-    // images.push(<img key={c} className={styles.pictureContainer_image} src={props.src} alt={props.alt} />)
     images.push(
       <ImageLoader
         key={c}
-        imgProps={{ className: styles.pictureContainer_image }}
+        imgProps={{ className: styles.pictureContainer_image, alt: props.alt }}
         src={props.src}
         preloader={Spinner}
-        wrapper={React.createFactory(React.Fragment)}
-      >
-        Image load failed!
-      </ImageLoader>
+        wrapper={React.createFactory(props => props.children)}
+      />
     )
   }
   return <div className={styles.pictureContainer}>{images}</div>
