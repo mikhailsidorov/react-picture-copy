@@ -7,10 +7,14 @@ cache:
     - 'node_modules'
 
 install:
+  - npm install -g codecov
   - npm install
 
 script:
-  - npm test
+  - npm test -- --coverage
+
+after_success:
+  - codecov
 
 deploy:
   provider: heroku
