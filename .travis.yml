@@ -15,9 +15,9 @@ script:
 
 after_success:
   - codecov
+  - npm run build
 
 deploy:
-  provider: heroku
-  api_key: $HEROKU_AUTH_TOKEN
-  app: react-picture-copy
+  provider: firebase
+  api_key: $FIREBASE_AUTH_TOKEN
   skip_cleanup: true
