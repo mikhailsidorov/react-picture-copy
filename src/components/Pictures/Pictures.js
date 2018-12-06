@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 
 import styles from './Pictures.module.css'
 import PictureContainer from './PictureContainer/PictureContainer'
@@ -10,6 +11,13 @@ class Pictures extends Component {
     super(props)
     this.apiUrl = 'https://jsonplaceholder.typicode.com/photos/1'
   }
+
+  static propTypes = {
+    counter: PropTypes.number,
+    src: PropTypes.string,
+    alt: PropTypes.string
+  }
+
   state = {
     image: {
       url: '',
